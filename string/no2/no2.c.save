@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<string.h>
+void rev(char *c);
+void rev(char *c)
+{  
+   if(*c!='\n')
+   {
+     rev();
+     printf("%c",*c);
+   }
+}
+
+int main()
+{
+  char c[]="helloworld";
+  rev(c);
+  printf("\n");
+  return 0;
+}

@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+   int n;
+   printf("enter the number:");
+   scanf("%d",&n);
+   printf("\nenter your choice\n1.leftshift&multiply\n2.rightshift&divide");
+   scanf("%d"&n);
+   switch(n);
+   {
+     case 1: 

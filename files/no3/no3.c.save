@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+   char c[20];
+  FILE *fp1;
+  fp1=fopen("Source1.txt","w+");
+  fputs("CDAC",fp1);
+ FILE *fp2;
+  fp2=fopen("source2.txt","w+");
+  fputs("hyderabad",fp2);
+  FILE *fpc;
+ fpc=fopen("target.txt","w");
+  if(fpc==NULL)
+  {
+   perror("error");
+   return -1;
+  }
+ while(!EOF(fp1))
+{
+  c=fgetc(fp1);
+  fputs(c,fpc);
+}
+fclose(fp1);
+rewind(fpc)
+while(!EOF(fp2))
+{
+  c=fgetc(fp2);
+  fputs(c,fpc,);
+}
+fclose(fp2);
+fclose(fpc);
+  return 0;
+}
